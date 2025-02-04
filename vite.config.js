@@ -10,4 +10,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        port: 5175, // กำหนดพอร์ตใหม่ที่ไม่ซ้ำกับพอร์ตอื่น
+    },
 });

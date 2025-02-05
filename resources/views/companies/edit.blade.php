@@ -12,52 +12,55 @@
             <div class="col-lg-12">
                 <h2>Edit Company</h2>
             </div>
-            <div>
-                <a href="{{ route ('companies.index') }}" class="btn btn-primary">Back</a>
-            </div>
+
+            <!-- Success message -->
             @if (session('status'))
-                <div class="alet alert-success">
+                <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
+
+            <!-- Form to edit company -->
             <form action="{{ route('companies.update', $company->id) }}" method="POST" enctype="multipart/form-data">
-                @method('PUT')
+                @method('PUT') <!-- ใช้ PUT method ในการอัปเดต -->
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group mt-3">
                             <strong>Company Name</strong>
-                            <input type="text" name="name" value="{{$company->name}}" class="form-control" placeholder="Company Name">
+                            <input type="text" name="name" value="{{ old('name', $company->name) }}" class="form-control" placeholder="Company Name">
                             @error('name')
-                            <div class="alert alert-danger">{{$message}}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
+
                     <div class="col-md-12">
                         <div class="form-group mt-3">
                             <strong>Company Email</strong>
-                            <input type="email" name="email" value="{{$company->email}}" class="form-control" placeholder="Company Email">
+                            <input type="email" name="email" value="{{ old('email', $company->email) }}" class="form-control" placeholder="Company Email">
                             @error('email')
-                            <div class="alert alert-danger">{{$message}}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
+
                     <div class="col-md-12">
                         <div class="form-group mt-3">
                             <strong>Company Address</strong>
-                            <input type="text" name="address" value="{{$company->address}}" class="form-control" placeholder="Company Address">
+                            <input type="text" name="address" value="{{ old('address', $company->address) }}" class="form-control" placeholder="Company Address">
                             @error('address')
-                            <div class="alert alert-danger">{{$message}}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
+
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
-
     </div>
 
 </body>

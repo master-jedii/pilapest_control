@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite('resources/js/app.js') <!-- เรียกใช้ Vite JS สำหรับ Vue -->
 </head>
 <body>
     <div id="app">
         <Navbar /> 
     </div>
-
     <div class="container mt-5" style="margin-left: 270px;"> <!-- ให้ช่องว่างสำหรับ Navbar -->
         <div class="row">
             <div class="col-lg-12">

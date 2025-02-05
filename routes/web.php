@@ -5,9 +5,6 @@ use App\Http\Controllers\CompanyCRUDController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 
-
-
-Route::resource('companies',CompanyCRUDController::class);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +23,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
 
+Route::get('companies/create', [CompanyCRUDController::class, 'create'])->name('companies.create');
+Route::post('companies', [CompanyCRUDController::class, 'store'])->name('companies.store');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

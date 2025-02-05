@@ -1,9 +1,6 @@
 <template>
   <div>
     <Navbar />  <!-- เรียกใช้งาน Navbar ที่นี่ -->
-    <div class="container mt-5" style="margin-left: 270px;">
-      <h1>Welcome to Dashboard from VUE</h1>
-    </div>
   </div>
 </template>
 

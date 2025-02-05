@@ -12,7 +12,7 @@
         <a class="nav-link text-white" href="/products">Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/companies/create">Customers</a>
+        <a class="nav-link text-white" href="/create">Customers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="/reports">Report</a>

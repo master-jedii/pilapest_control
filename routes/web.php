@@ -19,14 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
 
+
 Route::put('/companies/{company}', [CompanyController::class, 'update']); // สำหรับการอัปเดตข้อมูล
 Route::delete('companies/{id}', [CompanyController::class, 'destroy']); // สำหรับการลบข้อมูล
 Route::get('reports', [CompanyController::class, 'index'])->name('reports.index');
-
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);

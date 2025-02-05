@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyCRUDController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+
+
 
 Route::resource('companies',CompanyCRUDController::class);
 /*
@@ -19,12 +22,12 @@ Route::resource('companies',CompanyCRUDController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth');
 
-
-Route::get('admin/home', [HomeController::class, 'adminHome'])
-    ->name('admin.home')
-    ->middleware('is_admin');
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

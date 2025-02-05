@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    @vite('resources/js/app.js') <!-- เรียกใช้ Vite -->
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Welcome to Dashboard</h1>
-        <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button type="submit" class="btn btn-danger">Logout</button>
-        </form>
-    </div>
+    <div id="app"></div> <!-- Vue app จะถูก mount ที่ div นี้ -->
 </body>
 </html>

@@ -1,13 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
+import { createApp } from 'vue';
+import App from '../components/app.vue'; // นำเข้า App.vue
 
-import { createApp } from 'vue'; // import Vue 3
-import App from '../components/app.vue'; // import component App.vue
-
-// Mount App to the DOM
-createApp(App).mount('#vueapp');  // Mount App to #vueapp
-
-
-
-
-  
+const app = createApp(App); // เริ่มต้น Vue app โดยการใช้ App.vue
+app.mount('#app'); // ทำการ mount Vue app ที่ element #app

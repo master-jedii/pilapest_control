@@ -70,3 +70,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - composer install
 - npm install @vitejs/plugin-vue 
 - composer require laravel/ui
+- npm install vue@3

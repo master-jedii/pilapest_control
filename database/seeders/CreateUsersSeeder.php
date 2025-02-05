@@ -14,7 +14,7 @@ class CreateUsersSeeder extends Seeder
             'name' => 'Admin User',
             'email' => 'admin@example.com',
             'password' => Hash::make('password'),
-            'is_admin' => 1, // ถ้ามี field is_admin
+            'is_admin' => 1, 
             'created_at' => now(),
             'updated_at' => now(),
         ]);

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import vue from '@vitejs/plugin-vue'; // ✅ นำเข้า Vue Plugin
 
 export default defineConfig({
     plugins: [
@@ -10,5 +11,6 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        vue(), // ✅ ต้องใส่ Vue Plugin
     ],
 });

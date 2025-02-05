@@ -17,9 +17,6 @@
     <!-- Navbar ที่คุณสร้างไว้แล้ว -->
     <div class="container mt-5">
         <h2>Company Reports</h2>
-        <button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#createEmployeeModal">
-            Import from excel
-        </button>
         <!-- Table สำหรับแสดงข้อมูล Company -->
         <table class="table table-bordered">
             <thead>

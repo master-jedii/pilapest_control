@@ -2,11 +2,7 @@
   <div>
     <Navbar />  <!-- เรียกใช้งาน Navbar ที่นี่ -->
     <div class="container mt-5" style="margin-left: 270px;">
-      <h1>Welcome to Dashboard</h1>
-      <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        <button type="submit" class="btn btn-danger">Logout</button>
-      </form>
+      <h1>Welcome to Dashboard from VUE</h1>
     </div>
   </div>
 </template>

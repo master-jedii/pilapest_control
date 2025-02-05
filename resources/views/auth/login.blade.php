@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
-
     <div class="card p-4 shadow-lg" style="width: 400px;">
-        <h3 class="text-center">Login</h3>
+        <h3 class="text-center">Login Form Laravel</h3>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\AuthController;
-
+use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +22,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
-
-
 
 Route::put('/companies/{company}', [CompanyController::class, 'update']); // สำหรับการอัปเดตข้อมูล
 Route::delete('companies/{id}', [CompanyController::class, 'destroy']); // สำหรับการลบข้อมูล
